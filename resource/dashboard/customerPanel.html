@@ -1,0 +1,67 @@
+{%extends '/dashboard/dash.html'%}
+
+{%block leftsde%}
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card white">
+        <div class="card-content black-text">
+          <span class="card-title" >Admin Panel</span>
+          <ul>
+             <a href="/adminPanel"><li><i class="fa fa-tv"></i>Dashboard</li></a>
+             <a href="/adminPanel/customerPanel"><li>Add Customer </li></a>
+             <a href="/adminPanel/customerPanel/editCustomer"><li>Edit Customer</li></a>
+             <a href="/adminPanel/customerPanel/deleteCustomer"><li>Delete Customer</li></a>
+          </ul>
+         </div>
+    </div>
+  </div>
+  {%endblock%}
+  {%block rightside%}
+       <form method="POST" action="/utils/request.php"   enctype="multipart/form-data">
+      <div id = "dashboard" class="row container">
+        <fieldset> <legend><h1><strong>Add New Customer </strong></h1></legend> 
+      
+
+                <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "userName" id="userName" type="text">
+              <label for="userName">userName</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "password" id="password" type="password">
+              <label for="password">Password</label>
+            </div>
+        </div>
+          <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input type="text" name="dob" class="datepicker">
+              <label for="dob">DOB</label>
+            </div></div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "email" id="email" type="text">
+              <label for="email">Email</label>
+            </div>
+        </div>
+               
+
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="addCustomer">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+<script>
+    $(document).ready(function(){
+      $('select').formSelect();
+      $('.datepicker').datepicker({
+        format : 'yyyy-mm-dd'
+      });
+    });
+  </script>
+{%endblock%}

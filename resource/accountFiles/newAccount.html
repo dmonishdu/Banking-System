@@ -1,0 +1,110 @@
+{%extends 'home.html'%}
+{%block header%}
+  <nav class="nav-extended" style="background: white">
+      <div  class="nav-wrapper">
+
+      <ul   class="left hide-on-med-and-down">
+        <li ><a href="/" style="color: black">Home</a></li>
+        <li><a href="/adminLogin" style="color: black">Admin Login</a></li>
+        <li><a href="/staffLogin" style="color: black">Staff Login</a></li>
+        <li><a href="/contact" style="color: black">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+{%endblock%}
+{%block main%}
+<form method="post" action="/newAccount/address"  enctype="multipart/form-data">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Open New Bank Account</strong></h1></legend> 
+       <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><p style="color: red; text-align:right;"> * Required Fields</p></strong></div></div>
+        <br><br>
+               <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><h3 style="color: green; text-align:center;">Personal Details</h3></strong></div></div>
+        <br><br>
+
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "name" id="name" type="text">
+              <label for="name"> Customer Name*</label>
+            </div>
+          </div>
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "fatherName" id="fatherName" type="text">
+              <label for="fatherName"> Father's Name*</label>
+            </div>
+          </div>
+      	<div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "motherName" id="motherName" type="text">
+              <label for="motherName"> Mother's Name</label>
+            </div>
+          </div>
+           <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input type="text" name="dob" class="datepicker">
+              <label for="dob">Date Of Birth*</label>
+            </div></div>
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="sendMail">Next
+            <i class="material-icons right">arrow_forward</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+    <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+      $('.datepicker').datepicker({
+        format : 'yyyy-mm-dd'
+      });
+    });
+  </script>
+{%endblock%}

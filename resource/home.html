@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/images/h1.jpg" />
+<title>{{title}}</title>
+  {%block stylesheet%}
+
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/materialize.css">
+  <link rel="stylesheet" href="/css/animate.css" />
+  <link rel="stylesheet" href="/css/abc.css" />
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/materialize.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+{%endblock%}
+{% block upper%}
+<body >
+  <div class="card-panel hoverable">  
+<H1 align="center"><strong>Online Banking System</strong></H1>
+  </div> 
+  {%endblock%}
+  {%block header%}
+  <nav class="nav-extended" style="background: white">
+      <div  class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+            <a  style="color: black;"  href="/newAccount" ">Open Account</a>
+
+         
+        </ul>
+      <ul   class="left hide-on-med-and-down">
+        <li ><a href="/" style="color: black">Home</a></li>
+        <li><a href="/adminLogin" style="color: black">Admin Login</a></li>
+        <li><a href="/staffLogin" style="color: black">Staff Login</a></li>
+        <li><a href="/contact" style="color: black">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  {%endblock%}
+   {%block main%}
+  {%block loginwithimage%}
+  <form action="/utils/request.php" method="POST">
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card white">
+        <div class="card-content black-text">
+          <span class="card-title" >Secure Login</span>
+          <div class="input-field ">
+          <i class="material-icons prefix">person</i>
+          <input id="icon_prefix" type="text" name="userName" class="validate">
+          <label for="icon_prefix">UserName</label>
+        </div>
+          <div class="input-field ">
+          <i class="material-icons prefix">keyboard</i>
+          <input id="icon_prefix" type="password" name="Password" class="validate">
+          <label for="password">Password</label>
+        </div>
+   <div align="center">   
+ <button  class="btn waves-effect waves-light" type="submit" name="userLogin">Login
+    <i class="material-icons right">send</i></div>
+  </button>
+      
+      </div>
+    </div>
+    </form>
+  </div>
+     <div class="col s12 m9">
+      <div class="card white">
+        <div class="card-content black-text">
+
+            <img class="materialboxed" width="100%" src="images/notes.jpg" height="230px;">
+
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
+{%block down%} 
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card white">
+        <div class="card-content black-text">
+          <span class="card-title" >Features</span>
+          <p>Enjoy paperless, signatureless, branchless banking. You can open a RMSbank e-wallet in 90 seconds flat to enjoy making bill payments. And convert to a zero-balance RMSsavings account for the best interest rate instantly – all you need is your Aadhaar and PAN card. Now isn’t that easy?</p>
+ 
+      
+      </div>
+    </div>
+  </div>
+     <div class="col s12 m9">
+      <div class="card white">
+        <div class="card-content white-text">
+          <span class="card-title" style="color: black;">Notes</span>
+
+  <ul class="collapsible popout" data-collapsible="accordion" style="color: black;">
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">forward</i>click to read safe online banking tips</div>
+      <div style="background: black; color: white;" class="collapsible-body"><span>edsnfhkjdsgh hdasgfhdskjghj dhasgfdshjgf  dhsfgsdkjghjds dgfdshhgskdj dhsgfhdsfgkds hjadfsghds hdsfhdsgkhs jdsfhbhdsgf dsjfhhdsgfhdsg jsdfhgdshghkdfsj ashdfgjskdghsdk sdhfkgkdshgksj sjhdfkhsdgfkj jdsahfgkhsdg sajdfhsdhgbdsh sajfhhsdgbjds ajshfdshg ajshfgdshbg sajfhdsg jasgfhsdbgh sajfhbgdshbg sahfbdshvbf safhbdshbf jhafsdshfb sajfhhsdfv sahfb jsafhbdshbvfdsh safhbhdsvbf safhbdsh asdhfbhsdf sadfgdskjghkjsd sadfhjsdkgkh safhjghsdgkj sdjkgfdskjghsd sdfkjsdkjgh sadfkjhksjdgh asdkghksdjgh sajgfdskjgh sdkjghkjdsghn sdkjgfghsdjkghsdljg skdjghjdfkhg asdjgkhkjsdhg esajdkjghkjsdg askjdghskdjgh eksdgjhdfsjk </span></div>
+    </li>
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">explore</i>Terms and Condition </div>
+      <div class="collapsible-body"  style="background: black; color: white;"><span >edsnfhkjdsgh hdasgfhdskjghj dhasgfdshjgf  dhsfgsdkjghjds dgfdshhgskdj dhsgfhdsfgkds hjadfsghds hdsfhdsgkhs jdsfhbhdsgf dsjfhhdsgfhdsg jsdfhgdshghkdfsj ashdfgjskdghsdk sdhfkgkdshgksj sjhdfkhsdgfkj jdsahfgkhsdg sajdfhsdhgbdsh sajfhhsdgbjds ajshfdshg ajshfgdshbg sajfhdsg jasgfhsdbgh sajfhbgdshbg sahfbdshvbf safhbdshbf jhafsdshfb sajfhhsdfv sahfb jsafhbdshbvfdsh safhbhdsvbf safhbdsh asdhfbhsdf sadfgdskjghkjsd sadfhjsdkgkh safhjghsdgkj sdjkgfdskjghsd sdfkjsdkjgh sadfkjhksjdgh asdkghksdjgh sajgfdskjgh sdkjghkjdsghn sdkjgfghsdjkghsdljg skdjghjdfkhg asdjgkhkjsdhg esajdkjghkjsdg askjdghskdjgh eksdgjhdfsjk </span></div>
+    </li>
+        <li>
+      <div class="collapsible-header"><i class=" material-icons">live_help
+</i>Faq's</div>
+      <div class="collapsible-body"  style="background: black; color: white;"><span>edsnfhkjdsgh hdasgfhdskjghj dhasgfdshjgf  dhsfgsdkjghjds dgfdshhgskdj dhsgfhdsfgkds hjadfsghds hdsfhdsgkhs jdsfhbhdsgf dsjfhhdsgfhdsg jsdfhgdshghkdfsj ashdfgjskdghsdk sdhfkgkdshgksj sjhdfkhsdgfkj jdsahfgkhsdg sajdfhsdhgbdsh sajfhhsdgbjds ajshfdshg ajshfgdshbg sajfhdsg jasgfhsdbgh sajfhbgdshbg sahfbdshvbf safhbdshbf jhafsdshfb sajfhhsdfv sahfb jsafhbdshbvfdsh safhbhdsvbf safhbdsh asdhfbhsdf sadfgdskjghkjsd sadfhjsdkgkh safhjghsdgkj sdjkgfdskjghsd sdfkjsdkjgh sadfkjhksjdgh asdkghksdjgh sajgfdskjgh sdkjghkjdsghn sdkjgfghsdjkghsdljg skdjghjdfkhg asdjgkhkjsdhg esajdkjghkjsdg askjdghskdjgh eksdgjhdfsjk </span></div>
+    </li></ul>
+        </div>
+
+           <div class="card white">
+        <div class="card-content black-text">
+        <span class="card-title" style="color: black;">Personal Banking</span>
+      <p >   
+
+Internet Banking is a convenient way to do banking from the comfort of your home or office. Avoid the queue or delays and try our simple and secure Internet Banking facility for an unmatched online banking experience.
+Just login today using your User ID and Password to experience RMS Bank Internet Banking.  </p>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
+{%endblock%}
+{%block footer%}
+ <footer class="page-footer" style="background: grey;">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Note:</h5>
+                <p class="grey-text text-lighten-4">Enjoy paperless, signatureless, branchless banking. You can open a RMSbank e-wallet in 90 seconds flat to enjoy making bill payments. And convert to a zero-balance RMSsavings account for the best interest rate instantly – all you need is your Aadhaar and PAN card.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">UseFull Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Faq's</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Features</a></li>
+                
+                  <li><a class="grey-text text-lighten-3" href="/contact">Query</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 bank.co.in
+           
+            </div>
+          </div>
+        </footer>
+</body>
+</html>
+{%endblock%}

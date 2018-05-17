@@ -1,0 +1,42 @@
+{%extends '/dashboard/staffPanel.html'%}
+
+
+  {%block rightside%}
+  
+        	 <div  class="row container">
+        <fieldset> <legend><h1><strong>Update Staff Member</strong></h1></legend> 
+        <div id = "user" class="col s2 offset-s5">
+          <i class="large material-icons">colorize</i>
+        </div>
+            <div class="row">
+            <div class="row col s10 offset-s1">
+            	  <table class="highlight">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Date Of Birth</th>
+                <th>Image</th>
+              <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        	 {% for event in events %}
+          <tr>
+            <td>{{ event.name|e }}</td>
+            <td>{{ event.dob|e }}</td>
+            <td> <img style="height: 50px;width: 50px;" src="/utils/{{ event.image|e }}" 
+             ></img></td>
+               <td><a href='/adminPanel/staffPanel/editStaff/editDetails?userName={{ event.userName|e }}'><i class="medium material-icons">colorize</i></a></td>
+          </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+
+             
+      </div>
+    </div>
+
+        </fieldset>
+  </div>
+{%endblock%}

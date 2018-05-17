@@ -1,0 +1,43 @@
+{%extends '/StaffBoard/dash.html'%}
+
+  {%block rightside%}
+ <div  class="row container">
+        <fieldset> <legend><h1><strong> Atm/Cheque Book Requests</strong></h1></legend> 
+        <div id = "user" class="col s2 offset-s5">
+          <i class="large material-icons">account_box</i>
+        </div>
+            <div class="row">
+            <div class="row col s10 offset-s1">
+            	  <table class="highlight">
+        <thead>
+          <tr>
+          	<th>Verify</th>
+              <th>UserName</th>
+              <th>Date Of Birth</th>
+                <th>Email</th>
+              
+              <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        	 {% for event in events %}
+          <tr>
+          	 <td><a href='/staffDash/accountRequest/?id={{ event.id|e }}'><i class="medium material-icons">cloud_done</i></a></td>
+            <td>{{ event.Name|e }}</td>
+            <td>{{ event.Dob|e }}</td>
+            <td>{{ event.Email|e }}</td>
+              
+               <td><a href='/staffDash/accountRequest/delede?id={{ event.id|e }}'><i class="medium material-icons">delete_forever</i></a></td>
+          </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+
+             
+      </div>
+    </div>
+
+        </fieldset>
+  </div>
+{%endblock%}

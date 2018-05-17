@@ -1,0 +1,45 @@
+{%extends 'home.html'%}
+{%block header%}
+  <nav class="nav-extended" style="background: white">
+      <div  class="nav-wrapper">
+
+      <ul   class="left hide-on-med-and-down">
+        <li ><a href="/" style="color: black">Home</a></li>
+        <li><a href="/adminLogin" style="color: black">Admin Login</a></li>
+        <li><a href="/staffLogin" style="color: black">Staff Login</a></li>
+        <li><a href="/contact" style="color: black">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+{%endblock%}
+
+{%block main%}
+
+  <form method="POST" action="/utils/request.php">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Staff Login</strong></h1></legend> 
+        <div id = "user" class="col s2 offset-s5">
+          <i class="large material-icons">person_pin</i>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+              <input name = "userName" id="userName" type="text">
+              <label for="userName">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+              <input name = "Password" id="Password" type="Password">
+              <label for="Password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="staffLogin">LogIn
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+
+{%endblock%}

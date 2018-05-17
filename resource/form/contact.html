@@ -1,0 +1,40 @@
+{%extends 'home.html'%}
+
+{%block main%}
+
+  <form method="post" action="utils/request.php">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Contact Us</strong></h1></legend> 
+      
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+               <i class="material-icons prefix">account_circle</i>
+              <input name = "userName" id="userName" type="text">
+              <label for="username">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+               <i class="material-icons prefix">email</i>
+              <input name = "email" id="email" type="text">
+              <label for="email">Email</label>
+            </div>
+        </div>
+                <div class="row">
+            <div class="input-field col s10 offset-s1">
+         <i class="material-icons prefix">mode_edit</i>
+          <textarea id="icon_prefix2" name="query" id="query" class="materialize-textarea"></textarea>
+          <label for="query">Query</label>
+            </div>
+        </div>
+
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="sendMail">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+
+{%endblock%}

@@ -1,0 +1,61 @@
+{%extends '/accountFiles/newAccount.html'%}
+{%block main%}
+<form method="post" action="/newAccount/nominee"  enctype="multipart/form-data">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Open New Bank Account</strong></h1></legend> 
+       <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><p style="color: red; text-align:right;"> * Required Fileds</p></strong></div></div>
+        <br><br>
+               <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><h3 style="color: green; text-align:center;">Communication</h3></strong></div></div>
+        <br>
+         <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><hp style="color: red; text-align:center;">We will send a verification code on your email so please provide us a correct email .</p></strong></div></div>
+
+        <br>
+           <br>
+     </p>
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="Fname" value="{{Fname}}">
+        <input type="hidden" name="Mname" value="{{Mname}}">
+        <input type="hidden" name="dob" value="{{dob}}">
+        <input type="hidden" name="street" value="{{street}}">
+        <input type="hidden" name="pinCode" value="{{pinCode}}">
+        <input type="hidden" name="postOffice" value="{{postOffice}}">
+        <input type="hidden" name="district" value="{{district}}">
+        <input type="hidden" name="state" value="{{state}}">
+        <input type="hidden" name="houseNo" value="{{houseNo}}">
+        <input type="hidden" name="aadhaarNo" value="{{aadhaarNo}}">
+        <input type="hidden" name="panNo" value="{{panNo}}">
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "mobNo" id="mobNo" type="number">
+              <label for="mobNo">Mobile Number *</label>
+            </div>
+          </div>
+                        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "faxNo" id="faxNo" type="number">
+              <label for="faxNo">Fax Number</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "email" id="email" type="text">
+              <label for="email">Email *</label>
+            </div>
+        </div>
+  
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="sendMail">Next
+            <i class="material-icons right">arrow_forward</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+   
+{%endblock%}

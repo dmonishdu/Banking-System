@@ -1,0 +1,42 @@
+{%extends '/dashboard/customerPanel.html'%}
+
+
+{%block rightside%}
+  
+        	 <div  class="row container">
+        <fieldset> <legend><h1><strong>Update Customer</strong></h1></legend> 
+        <div id = "user" class="col s2 offset-s5">
+          <i class="large material-icons">edit</i>
+        </div>
+            <div class="row">
+            <div class="row col s10 offset-s1">
+            	  <table class="highlight">
+        <thead>
+          <tr>
+              <th>userName</th>
+              <th>Date Of Birth</th>
+                <th>Email</th>
+              <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        	 {% for event in events %}
+          <tr>
+            <td>{{ event.userName|e }}</td>
+            <td>{{ event.dob|e }}</td>
+            <td>{{ event.email|e }}</td>
+               <td><a href='/adminPanel/customerPanel/editCustomer/editDetails?userName={{ event.userName|e }}'><i class="medium material-icons">edit</i></a></td>
+          </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+
+             
+      </div>
+    </div>
+
+        </fieldset>
+  </div>
+{%endblock%}
+

@@ -1,0 +1,104 @@
+{%extends '/accountFiles/newAccount.html'%}
+{%block main%}
+
+<form method="post" action="/newAccount/document"  enctype="multipart/form-data">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Open New Bank Account</strong></h1></legend> 
+       <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><p style="color: red; text-align:right;"> * Required Fileds</p></strong></div></div>
+        <br><br>
+               <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><h3 style="color: green; text-align:center;">Address</h3></strong></div></div>
+        <br>
+        
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="Fname" value="{{Fname}}">
+        <input type="hidden" name="Mname" value="{{Mname}}">
+        <input type="hidden" name="dob" value="{{dob}}">
+        <input type="hidden" name="img" value="{{img}}">
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "houseNo" id="houseNo" type="text">
+              <label for="houseNo">House Number</label>
+            </div>
+          </div>
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "street" id="street" type="text">
+              <label for="street">Street/block</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "pinCode" id="pinCode" type="Number">
+              <label for="pinCode">Pin Code*</label>
+            </div>
+          </div>
+      	<div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "postOffice" id="postOffice" type="text">
+              <label for="postOffice">Post Office *</label>
+            </div>
+          </div>
+                	<div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "district" id="district" type="text">
+              <label for="district">District*</label>
+            </div>
+          </div>
+           <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "state" id="state" type="text">
+              <label for="state">State*</label>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="sendMail">Next
+            <i class="material-icons right">arrow_forward</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+   
+{%endblock%}

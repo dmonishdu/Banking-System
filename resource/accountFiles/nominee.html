@@ -1,0 +1,75 @@
+{%extends '/accountFiles/newAccount.html'%}
+{%block main%}
+<form method="post" action="/utils/request.php" enctype="multipart/form-data">
+      <div id = "dashboard" class="row container">
+      	<fieldset> <legend><h1><strong>Open New Bank Account</strong></h1></legend> 
+       <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><p style="color: red; text-align:right;"> * Required Fileds</p></strong></div></div>
+        <br><br>
+               <div class="row">
+          <div class=" col s10 offset-s1">
+        <strong><h3 style="color: green; text-align:center;">Nominee Details</h3></strong></div></div>
+        <br>
+         </p>
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="Fname" value="{{Fname}}">
+        <input type="hidden" name="Mname" value="{{Mname}}">
+        <input type="hidden" name="dob" value="{{dob}}">
+        <input type="hidden" name="street" value="{{street}}">
+        <input type="hidden" name="pinCode" value="{{pinCode}}">
+        <input type="hidden" name="postOffice" value="{{postOffice}}">
+        <input type="hidden" name="district" value="{{district}}">
+        <input type="hidden" name="state" value="{{state}}">
+        <input type="hidden" name="houseNo" value="{{houseNo}}">
+        <input type="hidden" name="panImg" value="{{panImg}}">
+       <input type="hidden" name="aadhaarNo" value="{{aadhaarNo}}">
+        <input type="hidden" name="panNo" value="{{panNo}}">
+        <input type="hidden" name="mobNo" value="{{mobNo}}">
+        <input type="hidden" name="faxNo" value="{{faxNo}}">
+        <input type="hidden" name="email" value="{{email}}">
+         <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "nameN" id="nameN" type="text">
+              <label for="nameN">Nominee Name *</label>
+            </div></div>
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "aadhaarN" id="aadhaarN" type="number">
+              <label for="aadhaarN">Nominee Aadhaar Number *</label>
+            </div></div>
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input type="text" name="dobN" class="datepicker">
+              <label for="dobN">Date Of Bearth*</label>
+            </div></div>
+   <!--    <div class="row">
+            <div class="file-field input-field col s10 offset-s1">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" name="customerImage" >
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" name="customerImage" placeholder="Customer Image" type="text" name="customerImage">
+      </div>
+    </div></div>
+  -->
+  
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="newAccount">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+     <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+      $('.datepicker').datepicker({
+        format : 'yyyy-mm-dd'
+      });
+    });
+  </script>
+   
+{%endblock%}

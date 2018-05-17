@@ -1,0 +1,74 @@
+{%extends '/dashboard/staffPanel.html'%}
+
+  {%block rightside%}
+  <form method="POST" action="/utils/request.php"   enctype="multipart/form-data" >
+      <div id = "dashboard" class="row container">
+        <fieldset> <legend><h1><strong>Update Staff Member </strong></h1></legend> 
+        <div id = "user" class="col s2 offset-s5">
+          <i class="large material-icons">edit</i>
+        </div>
+        <div class="row">
+        	<div class=" col s10 offset-s1">
+        <strong><p style="color: red; text-align: center;">Note : You Can Not Change UserName Of Any Staff .<br>userName Of This Staff : ({{userName}})</p></strong></div></div>
+        <br><br>
+         <input type="hidden" name="oldName" value='{{userName}}' />
+         {% for event in events %}
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "name" id="name" value="{{ event.name|e }}" type="text">
+              <label for="name">FullName</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input name = "password" value="{{ event.password|e }}" type="password">
+              <label for="password">Password</label>
+            </div>
+        </div>
+                <div class="row">
+            <div class="input-field col s10 offset-s1">
+            <!--   <i class="material-icons prefix">email</i> !-->
+              <input name = "email" value="{{ event.email|e }}" id="email" type="text">
+              <label for="email">Email</label>
+            </div>
+        </div>
+                <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input type="text" value="{{ event.dob|e }}" name="dob" class="datepicker">
+              <label for="dob">DOB</label>
+            </div>
+        </div>
+            <div class="row">
+            <div class="input-field col s10 offset-s1">
+              <input type="text" name="doj" value="{{ event.doj|e }}" class="datepicker">
+              <label for="doj">Joining Date</label>
+            </div>
+        </div>
+ <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" name="staffImage">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate"  placeholder="Upload Image" type="text" name="staffImage">
+      </div>
+    </div>
+ {% endfor %}
+
+        <div class="row">
+          <button class="btn waves-effect waves-light col s2 offset-s5" type="submit" name="updateStaff">Update
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </fieldset>
+      </div>
+    </form>
+ <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+      $('.datepicker').datepicker({
+        format : 'yyyy-mm-dd'
+      });
+    });
+  </script>
+{%endblock%}

@@ -1,0 +1,55 @@
+
+
+
+{%extends 'home.html'%}
+{%block header%}
+{%endblock%}
+
+{%block main%}
+   {% for event in events %}
+
+{%block leftsde%}
+ 
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card white">
+        <div class="card-content black-text">
+          <h3> UserPanel</h3>
+          <ul>
+            <a href="/userLogin"><li><i class="fa fa-tv"></i>Home</li></a>
+              <h5><li>Account</li></h5>
+             
+             <a href="#"><li>Account Summary</li></a>
+             <a href="#"><li>Mini Statement</li></a>
+             <a href="#"><li>Account Statement</li></a>
+             
+           <h5>  <li>Fund Transfer</li></h5>
+             <a href="#"><li>Add Beneficiary</li></a>
+             <a href="#"><li>View Added Beneficiary</li></a>
+             <a href="#"><li>Fund Transfer</li></a>
+            <h5> <li>Request</li></h5>
+             <a href="#"><li>Atm/Cheque Book Request</li></a>
+            <h5> <li>Profile</li></h5>
+            <a href="#"><li>Notification</li></a>
+            <a href="#"><li>Change Password</li></a>
+            <a href="/"><li>Logout</li></a>
+             
+          </ul>
+         </div>
+    </div>
+  </div>
+ 
+  {%endblock%}
+  {%block rightside%}
+     <div class="col s12 m9">
+
+    <div class="card-panel">
+    <span class="blue-text text-darken-2">Welcome : {{ event.Name|e }}</span>
+  </div>
+          
+
+        </div>
+</div>
+{%endblock%}
+  {% endfor %}
+{%endblock%}
